@@ -19,31 +19,6 @@ class Car:
     def Move(self,x,y):
         self.canvas.move(self.car_rectangle,x,y)
 
-class Roads:
-    def __init__(self):
-        self.routepunten =  {'A': (0, 500),
-                             'B': (200, 500),
-                             'C': (400, 500),
-                             'D': (600, 500),
-                             'E': (750, 500),
-                             'F': (0, 300),
-                             'G': (200, 300),
-                             'H': (400, 300),
-                             'I': (600, 300),
-                             'J': (750, 300),
-                             'K': (300, 200),
-                             'L': (300, 400),
-                             'M': (300, 600),
-                             'N': (300, 750),
-                             'O': (500, 200),
-                             'P': (500, 400),
-                             'Q': (500, 600),
-                             'R': (500, 750)}
-
-    def DisplayRoutepunten(self,canvas):
-        for key, value in self.routepunten.items():
-            print (key,value)
-            canvas.create_text(value[0]+10,value[1]+10,text=key,fill="yellow")
 
 
 
@@ -63,9 +38,6 @@ if __name__ == '__main__':
     #strepen
     canvas.create_line(400, 0, 400, 800, fill='white', dash=(20, 20))  # vertikaal
     canvas.create_line(0, 400, 800, 400, fill='white', dash=(20, 20))  # horizontaal
-
-    roads = Roads()
-    roads.DisplayRoutepunten(canvas)
 
 
 
